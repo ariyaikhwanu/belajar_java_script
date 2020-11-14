@@ -1,6 +1,6 @@
-var x = 10;
-console.log(x);
-console.log("Hello world");
+// var x = 10;
+// console.log(x);
+// console.log("Hello world");
 
 // alert('Hello World!');
 
@@ -177,27 +177,55 @@ console.log("Hello world");
 
 // alert("Terima kasih telah bermain");
 
-var tanya = true;
-var kesempatan = 3;
-var angka2 = Math.random();
-var angka = parseInt(angka2 * 10);
-console.log(angka);
-while (kesempatan > 0) {
-  var player = prompt(" Silakan tebak angka 0 - 10: ");
-  if (player == angka) {
-    alert("Benar! Jawban yang dimaksud adalah angka " + angka);
-    kesempatan = 0;
-  } else if (player > angka) {
-    kesempatan = kesempatan - 1;
-    alert("Salah! jawaban terlalu Rendah, kesempatan tinggal " + kesempatan);
-  } else if (player < angka) {
-    kesempatan = kesempatan - 1;
-    alert("Salah! jawaban terlalu Tinggi, kesempatan tinggal " + kesempatan);
-  } else {
-    alert("input salah");
-  }
+// var tanya = true;
+// var kesempatan = 3;
+// var angka2 = Math.random();
+// var angka = parseInt(angka2 * 10);
+// console.log(angka);
+// while (kesempatan > 0) {
+//   var player = prompt(" Silakan tebak angka 0 - 10: ");
+//   if (player == angka) {
+//     alert("Benar! Jawban yang dimaksud adalah angka " + angka);
+//     kesempatan = 0;
+//   } else if (player > angka) {
+//     kesempatan = kesempatan - 1;
+//     alert("Salah! jawaban terlalu Rendah, kesempatan tinggal " + kesempatan);
+//   } else if (player < angka) {
+//     kesempatan = kesempatan - 1;
+//     alert("Salah! jawaban terlalu Tinggi, kesempatan tinggal " + kesempatan);
+//   } else {
+//     alert("input salah");
+//   }
+// }
+
+// // tanya = confirm("lagi ?");
+
+// alert("Terima kasih, jawabannya adalah " + angka);
+
+function jumlahVolumeDuaKudus(a, b) {
+  var volumeA;
+  var volumeB;
+  var total;
+
+  volumeA = a * a * a;
+  volumeB = b * b * b;
+
+  total = volumeA + volumeB;
+  return total;
 }
 
-// tanya = confirm("lagi ?");
+function tambah(a, b) {
+  return a + b;
+}
 
-alert("Terima kasih, jawabannya adalah " + angka);
+function tambah2() {
+  var hasil = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    hasil += arguments[i];
+  }
+  return hasil;
+}
+var c = 12;
+var d = 10;
+hasil = jumlahVolumeDuaKudus(tambah2(1, 2, 3, 4, 5, 6), d);
+console.log(hasil);
